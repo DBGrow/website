@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108991485-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-108991485-1');
+    </script>
+
+    <!-- start Mixpanel -->
+    <script type="text/javascript">(function (e, a) {
+        if (!a.__SV) {
+            var b = window;
+            try {
+                var c, l, i, j = b.location, g = j.hash;
+                c = function (a, b) {
+                    return (l = a.match(RegExp(b + "=([^&]*)"))) ? l[1] : null
+                };
+                g && c(g, "state") && (i = JSON.parse(decodeURIComponent(c(g, "state"))), "mpeditor" === i.action && (b.sessionStorage.setItem("_mpcehash", g), history.replaceState(i.desiredHash || "", e.title, j.pathname + j.search)))
+            } catch (m) {
+            }
+            var k, h;
+            window.mixpanel = a;
+            a._i = [];
+            a.init = function (b, c, f) {
+                function e(b, a) {
+                    var c = a.split(".");
+                    2 == c.length && (b = b[c[0]], a = c[1]);
+                    b[a] = function () {
+                        b.push([a].concat(Array.prototype.slice.call(arguments,
+                            0)))
+                    }
+                }
+
+                var d = a;
+                "undefined" !== typeof f ? d = a[f] = [] : f = "mixpanel";
+                d.people = d.people || [];
+                d.toString = function (b) {
+                    var a = "mixpanel";
+                    "mixpanel" !== f && (a += "." + f);
+                    b || (a += " (stub)");
+                    return a
+                };
+                d.people.toString = function () {
+                    return d.toString(1) + ".people (stub)"
+                };
+                k = "disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+                for (h = 0; h < k.length; h++)e(d, k[h]);
+                a._i.push([b, c, f])
+            };
+            a.__SV = 1.2;
+            b = e.createElement("script");
+            b.type = "text/javascript";
+            b.async = !0;
+            b.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "file:" === e.location.protocol && "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";
+            c = e.getElementsByTagName("script")[0];
+            c.parentNode.insertBefore(b, c)
+        }
+    })(document, window.mixpanel || []);
+    mixpanel.init("c3a62d0ec2f5c8088a8fc5a7acf1745c");</script><!-- end Mixpanel -->
+
+    <meta charset="UTF-8">
+
+    <title>Documentation</title>
+    <meta name="theme-color" content="#000c2b">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--DEPS-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="./docs.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Saira" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <!--prism-->
+    <link href="../common/css/prism.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-java.min.js"></script>
+
+    <link rel=icon href=https://s3-us-west-1.amazonaws.com/dbgrow/images/favicon.ico>
+    <script src="./docs.js"></script>
+</head>
+
+<body style=" font-family: 'Roboto', sans-serif;   background-color: white;">
+
+<div>
+    <!--Topology node list centered vertically, whole width-->
+
+    <div>
+
+        <div style="background-color: #00123c">
+            <div id="header" style="  background-color: #000c2b;">
+                <a href="/">
+                    <img src="https://s3-us-west-1.amazonaws.com/dbgrow/images/logo.png" style="cursor: pointer;"
+                         alt="MongoDB Hosting"
+                         title="Database"
+                         width="30px" height="30px;"><span
+                        class="logo_text" style="margin-left: 3px; top: 10px; vertical-align: middle; font-size: 26px;">DBGrow</span>
+                </a>
+
+                <div style="float: right;  margin-top: 8px; font-size: 14px; color: white">
+                                    <span style=" margin-right: 12px;"><a
+                                            style=" text-decoration: none;"
+                                            href="/docs">Docs</a></span>
+                    <span style=" margin-right: 12px;"><a
+                            style=" text-decoration: none;"
+                            href="/pricing">Pricing</a></span>
+                    <span id="signin" style="margin-right: 12px;"><a title="Login"
+                                                                     style=" text-decoration: none;"
+                                                                     href="/signin">Login</a></span>
+                    <span id="signup" style="color: white; font-size: 16px; padding: 6px 12px; border-radius: 30px; font-weight: 600;"><a title="Sign Up"
+                                                                                                                                          style=" text-decoration: none;"
+                                                                                                                                          href="/signup">Sign Up</a></span>
+
+                    <span id="account" style="font-weight: 600; display: none;"><a title="Account"
+                                                                                   style=" text-decoration: none;"
+                                                                                   href="/account">My Account<span
+                            class="material-icons"
+                            style="margin-left: 6px; font-size: 22px; float:right; color: white;cursor: pointer;">account_circle</span></a></span>
+                </div>
+            </div>
+
+            <div id="headline_container"
+                 style=" z-index: -10; padding-bottom: 32px;  background-color: #000c2b; width: 100%; text-align: center">
+                <div style="height: 16px;"></div>
+                <!--Tagline-->
+                <img src="https://png.icons8.com/stack/nolan/64" style="display: block; margin: auto"
+                     width="64px" height="64px;">
+                <span id="headline"
+                      style="font-family: 'Saira', sans-serif; color: white; font-size: 34px;">Documentation</span>
+                <!-- Topic list-->
+                <div style="color: white; margin-top: 12px;">
+                    <div style="display: block; text-align: left; width: 170px; margin: 0 auto; ">
+                        <a href="#getting_started">Getting Started</a>
+                        <br>
+                        <a href="#creating_a_database">Creating A Database</a>
+                        <br>
+                        <a href="#console">The Console</a>
+                        <br>
+                        <a style="font-size: 13px; margin-left: 16px;" href="#monitoring_tab">The Monitoring Tab</a>
+                        <br>
+                        <a style="font-size: 13px; margin-left: 16px;" href="#backup_tab">The Backup Tab</a>
+                        <br>
+                        <a style="font-size: 13px; margin-left: 16px;" href="#settings_tab">The Settings Tab</a>
+                        <br>
+                        <a href="#import">Import A Database</a>
+                        <br>
+                        <a style="font-size: 13px; margin-left: 16px;" href="#copydb">With db.copyDatabase()</a>
+                        <br>
+                        <a style="font-size: 13px; margin-left: 16px;" href="#mongodump">With
+                            mongodump+restore</a>
+                        <br>
+                        <a style="font-size: 13px; margin-left: 16px;" href="#aws">From AWS Snapshot</a>
+                        <br>
+                        <a style="font-size: 13px; margin-left: 16px;" href="#files">From DB files</a>
+                        <br>
+                        <a href="#export">Export Your Database</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style=" margin-top: 28px; padding: 0 64px 16px 64px;">
+            <a name="topic_0"></a>
+            <span style="font-size: 30px;">Getting Started</span>
+            <br>
+            <br>
+            <span style="font-size: 14px; color: #6d6d6d">
+                Welcome to the <strong>DBGrow</strong> Docs!
+                <br>
+                Here you'll find instructions on how to get started and information about how our system works.
+                <br>
+                <br>
+                To get started with DBGrow, All you'll need is a valid email address, Github, or Google account.
+                <br>
+                <a href="/signup">Signup for DBGrow</a> if you haven't already,
+                <br>
+                once you complete the registration flow you'll be directed to <a href="#topic_1">Create your first Database!</a>
+            </span>
+        </div>
+
+        <a name="creating_a_database"></a>
+        <div style=" margin-top: 28px; padding: 32px 64px 32px 64px; background-color: #e7e7e7; color: #6d6d6d">
+            <span style="font-size: 30px;">Creating A Database</span>
+            <br>
+            <br>
+            <span style="font-size: 14px; ">Registered users can <a href="/createdb"
+                                                                    target="_blank">Create a Database</a>. You can have as many databases as you'd like! You can provision instances in any of AWS's 14 Global regions.
+            <br>
+            Databases are separated into 3 Distinct types: <strong>Shared</strong>, <strong>Standalone</strong>, and <strong>Replica Set</strong>.
+            <br>
+            <br>
+                    <strong>Shared Databases</strong> are 100% Free and include 1GB of free storage. Free databases are great for learning MongoDB and supporting small projects. Your database will be hosted on an EC2 Instance in the AWS region of your choice, tenancy is shared between your database and other DBGrow customers in the region.
+                <br>
+                <br>
+            All <strong>Standalone</strong> and <strong>Replica Set</strong> DB's support the follow RAM quantities:
+            <br>
+            <strong>0.5GB</strong>, <strong>1GB</strong>, <strong>2GB</strong>, <strong>4GB</strong>, <strong>8GB</strong>, <strong>16GB</strong>, <strong>32GB</strong> or <strong>64GB</strong>.
+
+            <br>
+            <br>
+            <strong>Standalone Databases</strong> are hosted on a dedicated EC2 Instance. You can choose any AWS public region and instance size, up to 64GB RAM
+            <br>
+            Standalones are great for small projects that need dedicated resources.
+            <br>
+            <br>
+            <strong>Replica Set Databases</strong> are networks of 3-50 dedicated Mongodb nodes spread between one or more AWS Regions and Availability Zones.
+                 <br>
+                Replica Sets are great for sized projects and businesses that need high availability.
+            <br>
+            <br>
+            <br>
+            Now Let's <a href="/createdb" target="_blank">create a database</a>!
+            <br>
+            </span>
+            <div style="height: 16px"></div>
+            <img class="w3-card-4" src="https://s3-us-west-1.amazonaws.com/dbgrow/images/createdb.png" height="auto"
+                 width="90%"
+                 style="display: block; margin: auto;">
+            <br>
+            On the first slide of the Create DB flow you'll be able to select your Database Type. Depending on which
+            type is selected,
+            The next slide will request additional info to provision your DB such as the target region(s), RAM, and
+            member count.
+            <br>
+            <br>
+            For example, here is the Replica Set slide which allows you to configure your initial Replica Set.
+            <br>
+            <br>
+            <img class="w3-card-4" src="https://s3-us-west-1.amazonaws.com/dbgrow/images/createdbrs.png" height="auto"
+                 width="90%"
+                 style="display: block; margin: auto;">
+            <div style="text-align: center; font-size: 12px; padding-top: 8px">
+                <strong>Note: </strong>You can provision up to 7 nodes across 3 regions to start. You can
+                add additional nodes any time
+            </div>
+            <br>
+            After completing the slide, you'll be prompted for a database name.
+            <br>
+            Database names must be unique within our system, and at least 3 characters long. If a database name is too
+            short or unavailable you'll be blocked
+            from proceeding to the summary slide until the conditions are met.
+            <br>
+            Let's proceed to the Summary slide where we'll review complete the provisioning.
+            <br>
+            <br>
+            <img class="w3-card-4" src="https://s3-us-west-1.amazonaws.com/dbgrow/images/createdbsummary.png"
+                 height="auto" width="90%"
+                 style="display: block; margin: auto;">
+            <br>
+            Here you'll see the summary for your new DB including all applicable Pricing, Regions, RAM, and Member
+            Count.
+            <br>
+            <br>
+            Click the <strong>Create Database</strong> button to confirm the details and start your deployment.
+            <br>
+            <br>
+            If provisioning a <strong>Standalone</strong> or <strong>Replica Set</strong> and you have no payment
+            methods yet,
+            you'll be prompted to add one before provisioning continues.
+            <br>
+            <br>
+            Once you begin provisioning you'll see a progress bar along with status updates about the provisioning
+            process. As soon as it completes you'll be taken to your new DB's console page.
+            <br>
+            <br>
+            <strong>Note: </strong>Provisioning Replica Sets across multiple regions may take a minute or two to
+            complete.
+            <br>
+            <br>
+            <img class="w3-card-4" src="https://s3-us-west-1.amazonaws.com/dbgrow/images/createdbprogress.png"
+                 height="auto" width="90%"
+                 style="display: block; margin: auto;">
+        </div>
+
+        <div style=" margin-top: 28px; padding: 32px 64px 32px 64px; color: #6d6d6d">
+            <a name="console"></a>
+            <span style="font-size: 30px;">The Console</span>
+
+            <div style="height: 16px"></div>
+            <img class="w3-card-4" src="https://s3-us-west-1.amazonaws.com/dbgrow/images/console.png" height="auto"
+                 width="90%"
+                 style="display: block; margin: auto;">
+            <br>
+            Welcome to the heart of DBGrow! In the top panel you can see the overall health of your deployment,
+            including RAM, AWS placement, and get connection codes in several popular languages.
+            <br>
+            You can upgrade to a different Database Type, change RAM, or add nodes to your Replica Set at any time by
+            pressing the obnoxiously large <span style="color: #63ef52; cursor: pointer">Green Button ❤</span>
+            <br>
+            <br>
+            In the tabs below you can <strong>execute</strong> mongo commands, <strong>monitor</strong> your
+            deployment metrics, manage snapshots and <strong>backup</strong>, and adjust <strong>settings</strong>.
+
+            <br>
+            <div><a name="monitoring_tab"></a></div>
+            <br>
+            <br>
+            <!--<a name="monitoring_tab"></a>-->
+            <span style="font-size: 20px">The Monitoring Tab</span>
+            <div style="height: 16px"></div>
+            <img class="w3-card-4" src="https://s3-us-west-1.amazonaws.com/dbgrow/images/monitoringtab.png"
+                 height="auto" width="90%"
+                 style="display: block; margin: auto;">
+            <br>
+            On the Monitoring tab you can view vital MongoDB metrics as they're collected over time. The display
+            interval is adjustable from 1 Minute to 6 Months. At shorter intervals, metrics update in real time.
+            <br>
+            <br>
+            Currently, our Metrics dashboard supports the following MongoDB metrics (and their rates of change):
+            <br>
+            <br>
+            <table style="width:100%; text-align: left">
+                <tr class="spaceUnder">
+                    <th style="float: left">Metrics</th>
+                    <th style=""></th>
+                </tr>
+                <tr class="spaceUnder">
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="spaceUnder">
+                    <td>RAM Used*<span class="tooltip"><span class="tooltiptext">Total amount of RAM used by MongoDB. Including indexes and in-memory data</span> <span class="material-icons"
+                                                                                                            style="color: #8c8c8c; vertical-align: middle; font-size: 16px">help</span></span></td>
+                    <td data-metric="ram_allocated_bytes">RAM Allocated*<span class="tooltip"><span class="tooltiptext">Total amount of RAM given to the MongoDB process by the Operating System</span> <span class="material-icons"
+                                                                                                                                                   style="color: #8c8c8c; vertical-align: middle; font-size: 16px">help</span></span></td>
+                </tr>
+                <tr class="spaceUnder">
+                    <td data-metric="disk_used_bytes">Storage Used<span class="tooltip"><span class="tooltiptext">Total amount of storage occupied by all database data</span> <span class="material-icons"
+                                                                                                                                             style="color: #8c8c8c; vertical-align: middle; font-size: 16px">help</span></span></td>
+                    <td data-metric="disk_used_bytes_sec">Storage Used/Sec<span class="tooltip"><span class="tooltiptext">Rate in bytes/sec of how quickly storage is being increased/decreased</span> <span class="material-icons"
+                                                                                                                                                     style="color: #8c8c8c; vertical-align: middle; font-size: 16px">help</span></span></td>
+
+                </tr>
+                <tr class="spaceUnder">
+                    <td data-metric="connections">Connections*<span class="tooltip"><span class="tooltiptext">Number of connections currently open to the MongoDB server</span> <span class="material-icons"
+                                                                                          style="color: #8c8c8c; vertical-align: middle; font-size: 16px">help</span></span>
+                    </td>
+                    <td data-metric="available_connections">Available Conn.*<span class="tooltip"><span class="tooltiptext">Remaining number of connections that can be made to the MongoDB server</span> <span class="material-icons"
+                                                                                                                                                       style="color: #8c8c8c; vertical-align: middle; font-size: 16px">help</span></span></td>
+                </tr>
+
+                <tr class="spaceUnder">
+                    <td data-metric="objects">Objects<span class="tooltip"><span class="tooltiptext">The total number of objects currently stored in your database. Does not include system collections</span> <span class="material-icons"
+                                                                                                                                style="color: #8c8c8c; vertical-align: middle; font-size: 16px">help</span></span></td>
+                    <td data-metric="objects_sec">Objects/Sec<span class="tooltip"><span class="tooltiptext">How quickly your database is inserting/deleting documents per second</span> <span class="material-icons"
+                                                                                                                                        style="color: #8c8c8c; vertical-align: middle; font-size: 16px">help</span></span></td>
+                </tr>
+                <tr class="spaceUnder">
+                    <td data-metric="avg_object_size">Avg. Object Size<span class="tooltip"><span class="tooltiptext">Typical size of the objects stored in your database.</span> <span class="material-icons"
+                                                                                                                                                 style="color: #8c8c8c; vertical-align: middle; font-size: 16px">help</span></span></td>
+                    <td data-metric="collections">Collections<span class="tooltip"><span class="tooltiptext">Number of MongoDB collections your database contains</span> <span class="material-icons"
+                                                                                                                                        style="color: #8c8c8c; vertical-align: middle; font-size: 16px">help</span></span></td>
+                </tr>
+                <tr class="spaceUnder">
+                    <td data-metric="indexes">Indexes<span class="tooltip"><span class="tooltiptext">Number of indexes that exist for your database</span> <span class="material-icons"
+                                                                                                                                style="color: #8c8c8c; vertical-align: middle; font-size: 16px">help</span></span></td>
+                    <td data-metric="index_size_bytes">Indexes Size<span class="tooltip"><span class="tooltiptext">Total size in bytes of how much space your database's indexes take up in RAM</span> <span class="material-icons"
+                                                                                                                                              style="color: #8c8c8c; vertical-align: middle; font-size: 16px">help</span></span></td>
+                </tr>
+                <tr class="spaceUnder">
+                    <td data-metric="available_write_tickets">Available Writes*<span class="tooltip"><span class="tooltiptext">Number of possible concurrent writers</span> <span class="material-icons"
+                                                                                                                                                          style="color: #8c8c8c; vertical-align: middle; font-size: 16px">help</span></span></td>
+                    <td data-metric="available_read_tickets">Available Reads*<span class="tooltip"><span class="tooltiptext">Number of possible concurrent readers</span> <span class="material-icons" style="color: #8c8c8c; vertical-align: middle; font-size: 16px">help</span></span></td>
+                </tr>
+
+                <tr class="spaceUnder">
+                    <td data-metric="queued_reads">Queued Reads*<span class="tooltip"><span class="tooltiptext">Number of reads currently waiting to be executed</span> <span class="material-icons"
+                                                                                                                                           style="color: #8c8c8c; vertical-align: middle; font-size: 16px">help</span></span></td>
+                    <td data-metric="queued_writes">Queued Writes*<span class="tooltip"><span class="tooltiptext">Number of writes currently waiting to be executed</span> <span class="material-icons"
+                                                                                                                                             style="color: #8c8c8c; vertical-align: middle; font-size: 16px">help</span></span></td>
+                </tr>
+                <tr class="spaceUnder">
+
+                    <td data-metric="insert_sec">Inserts/Sec*<span class="tooltip"><span class="tooltiptext">Number of objects inserted into the server per second. Includes system collections</span> <span class="material-icons"
+                                                                                                                                       style="color: #8c8c8c; vertical-align: middle; font-size: 16px">help</span></span></td>
+                    <td data-metric="delete_sec">Deletes/Sec*<span class="tooltip"><span class="tooltiptext">Number of objects deleted from server per second. Includes system collections</span> <span class="material-icons"
+                                                                                                                                       style="color: #8c8c8c; vertical-align: middle; font-size: 16px">help</span></span></td>
+                </tr>
+                <tr class="spaceUnder">
+                    <td data-metric="query_sec">Queries/Sec*<span class="tooltip"><span class="tooltiptext">Number of queries executed the server per second. Includes system collections</span> <span class="material-icons"
+                                                                                                                                      style="color: #8c8c8c; vertical-align: middle; font-size: 16px">help</span></span></td>
+                    <td data-metric="update_sec">Updates/Sec*<span class="tooltip"><span class="tooltiptext">Number of objects updated on the server per second. Includes system collections</span> <span class="material-icons"
+                                                                                                                                       style="color: #8c8c8c; vertical-align: middle; font-size: 16px">help</span></span></td>
+                </tr>
+
+                <tr class="spaceUnder">
+                    <td data-metric="page_faults">Page Faults*<span class="tooltip"><span class="tooltiptext">Number of times per second the MongoDB server currently has to request data from disk (instead of RAM)</span> <span class="material-icons"
+                                                                                                                                         style="color: #8c8c8c; vertical-align: middle; font-size: 16px">help</span></span></td>
+                    <td>Replication Lag* **<span class="tooltip"><span class="tooltiptext">How long in milliseconds the slowest secondary is behind the primary.</span> <span class="material-icons"
+                                                                                                                      style="color: #8c8c8c; vertical-align: middle; font-size: 16px">help</span></span></td>
+                    <td></td>
+                </tr>
+            </table>
+
+            <div style="text-align: center">
+                * Not available on Shared database plans
+            </div>
+
+            <div style="text-align: center">
+                ** Not available on Standalone database plans
+            </div>
+
+            <br>
+            <div><a name="backup_tab"></a></div>
+            <br>
+            <span style="font-size: 20px">The Backup Tab</span>
+            <br>
+
+            <div style="height: 16px"></div>
+            <img class="w3-card-4" src="https://s3-us-west-1.amazonaws.com/dbgrow/images/backuptab.png" height="auto"
+                 width="90%"
+                 style="display: block; margin: auto;">
+            <br>
+            On the Backup Tab you can manage automated and manual snapshots.
+            <br>
+            To take a new snapshot, click the plus button on the right hand side. A new snapshot entry will
+            appear with the current timestamp and snapshot size.
+            <br>
+            <br>
+            <strong>Rolling Snapshots</strong> are snapshots that are taken manually by you, or automatically by us.
+            DBGrow takes snapshots each hour if you do not do so manually, so you always have a fresh save point.
+            <br>
+            DBGrow keeps up to 75 rolling snapshots. Once this limit is reached, new snapshots cause the oldest
+            snapshot to be deleted.
+            <br>
+            <br>
+            <strong>Saved Snapshots</strong> are snapshots that are manually saved by you in order to protect them from
+            auto-deletion. Saved snapshots can be shared with your AWS account so you can export your database in
+            moments, natively! This process is described below in <a href="#export">Export Your Database</a>
+            <br>
+            <br>
+            Using the buttons on the right side of each snapshot entry in Rolling Snapshots you may
+            <strong>Save</strong> the snapshot, <strong>Restore</strong> the DB from the snapshot, or
+            <strong>Delete</strong> the snapshot.
+            <br>
+            In the Saved Snapshots tab the save button for each entry is replaced with a <strong>Share</strong> button
+            to allow access from your AWS account.
+
+            <br>
+            <div><a name="settings_tab"></a></div>
+            <br>
+            <br>
+
+            <span style="font-size: 20px">The Settings Tab</span>
+            <div style="height: 16px"></div>
+            <img class="w3-card-4" src="https://s3-us-west-1.amazonaws.com/dbgrow/images/settingstab.png" height="auto"
+                 width="90%"
+                 style="display: block; margin: auto;">
+            <br>
+            On the Settings Tab you can change White List settings, including quick adding your IP address to the White
+            List.
+            <br>
+            <br>
+            <strong>Note: </strong>IP Whitelisting isn't available for Shared plans
+            <br>
+            <br>
+            By default, there are no IP access rules. By adding IP's to the whitelist, you are making a rule that allows
+            machines with these public IP address to access your database. This is an important security measure, so we
+            recommend you se this up <strong>as soon as possible</strong> with your new Standalone or Replica Set plan.
+            <br>
+            <br>
+            Removing all IP rules will re-allow access from any IP address.
+            <br>
+            <br>
+            <br>
+            <br>
+            <a name="import"></a>
+            <span style="font-size: 30px;">Import A Database</span>
+            <br>
+            At DBGrow you can easily import your preexisting database from an existing provider, or from localhost
+            access.
+            <br>
+            <br>
+            Depending on your requirements, there are several options to consider.
+            Small databases that can be given temporary access (via IP whitelist, etc) to your new DBGrow server might
+            use <strong>db.copyDatabase()</strong>. If you'd prefer not to, or cant make your old database accessible to
+            your new
+            DBGrow instance (VPC, Localhost development, Whitelist, etc) and have a small database, using a combination
+            of <strong>mongodump</strong> and <strong>mongorestore</strong> might be best. If you have a large database
+            that already
+            runs on AWS you can share an EBS snapshot with us and <strong>we'll import it onto DBGrow for free!</strong>
+            We also offer free migration services for large non-AWS databases if you provide us with a copy of your
+            database files.
+            <br>
+            <br>
+            Please contact support if you'd like us to help you get your database up and running on DBGrow!
+            <br>
+            <br>
+
+            Certain examples require you to have the MongoDB shell installed. You can find <a target="_blank"
+                                                                                              href="https://mongodb.org/download">the
+            latest release of MongoDB here</a>. All following examples were conducted with Mongo Shell Version 3.4.2.
+            <br>
+
+            <br>
+            <br>
+            <a name="copydb"></a>
+            <span style="font-size: 24px">With db.copyDatabase()</span>
+            <br>
+            If you're willing to temporarily make your old deployment publicly available to your Standalone or Replica
+            Set and have a small database (<20GB), copyDatabase may be a good option.
+            <br>
+            <br>
+            Before beginning please ensure your deployment has allowed access on the necessary ports for your DBGrow
+            instance's IP.
+            You can find your instances' public IP(s) address by hovering over each status circle in the upper half of
+            your DBGrow console.
+            <br>
+            <br>
+            We recommend using the newer db.copyDatabase() method over the older copydb command, as copydb doesn't allow
+            authentication via SCRAM-SHA-1 and has a few other caveats. If you're trying to transfer
+            <strong>FROM</strong> a DBGrow instance to another host, you must use db.copyDatabase() as we use
+            SCRAM-SHA-1
+            as our auth method.
+            <br>
+            <br>
+            In Linux or Windows terminal connect to your DBGrow instance:
+            <br>
+            <br>
+            <div style="padding: 32px; background-color: #00123c; color: white; border-radius: 6px; overflow-x: auto">
+            <pre style="margin: 20px 0 0 16px; ">
+<code id="connection_code">
+    mongo --host [yourdbname]0.dbgrow.com/[yourdbname] --username read_write --password [yourpassword] --ssl --sslAllowInvalidHostnames --authenticationDatabase [yourdbname]
+    use [yourdbname]
+    db.copyDatabase([old db name], [yourdbname], [old db address:port], [old db username], [old db pass], [mechanism])
+</code>
+            </pre>
+            </div>
+            <br>
+            You'll see <span style="background-color: #cccccc; padding: 4px 4px; border-radius: 3px">{okay: 1}</span>
+            when the transfer is complete!
+            you can use the db.currentOp() command from the shell to monitor the progress of your copy operation.
+
+            <br>
+            <br>
+            <br>
+            <a name="mongodump"></a>
+            <span style="font-size: 24px">With MongoDump + MongoRestore</span>
+            <br>
+            MongoDump and MongoRestore are a good option if you don't want to/can't allow access to your old database
+            from your new DBGrow instance.
+            The process involves taking a binary dump of your database using <strong><a target="_blank"
+                                                                                        href="https://docs.mongodb.com/manual/reference/program/mongodump/">mongodump</a></strong>,
+            and then using
+            <strong><a target="_blank" href="https://docs.mongodb.com/manual/reference/program/mongorestore/">mongorestore</a></strong>
+            to
+            upload the binary dump of your database to your DBGrow instance.
+            <br>
+            <br>
+            In your Linux or Windows terminal on your old database server dump your database:
+            <br>
+            <br>
+            <div style="padding: 32px; background-color: #00123c; color: white; border-radius: 6px; overflow-x: auto">
+            <pre style="margin: 20px 0 0 16px; ">
+<code>
+    mongodump --db [old db name]
+</code>
+            </pre>
+            </div>
+            <br>
+
+            This will create a binary dump of your selected database in a folder called <span
+                style="background-color: #cccccc; padding: 4px 4px; border-radius: 3px">dump</span> in the current
+            working directory.
+            <br>
+            <br>
+            Once completed, use mongorestore to push your dump to your DBGrow instance. Make sure to add the correct
+            path to your newly created dump as the last argument:
+            <br>
+            <br>
+            <div style="padding: 32px; background-color: #00123c; color: white; border-radius: 6px; overflow-x: auto">
+            <pre style="margin: 20px 0 0 16px; ">
+<code>
+    mongorestore --host [yourdbname]0.dbgrow.com/[yourdbname] --username read_write --password [yourpassword] --ssl --sslAllowInvalidHostnames --authenticationDatabase [yourdbname] [dump folder path]
+</code>
+            </pre>
+            </div>
+            <br>
+            <br>
+            <a name="aws"></a>
+            <span style="font-size: 24px">From AWS Snapshot</span>
+            <br>
+            If you have a large database (>20GB) You can provide us with a EBS snapshot shared from your AWS account and
+            we'll take care of transferring your files over to your new DBGrow database for free! It's okay if your DB
+            directory is located on the root volume or an external one. Please contact support if you're interested.
+            <br>
+            <br>
+            <a name="files"></a>
+            <span style="font-size: 24px">From DB Files</span>
+            <br>
+            If you have a large database (>20GB) but don't use AWS for your hosting You can provide us with the zipped
+            version of your DB files and we'll transfer them to your new DBGrow database for free! Please contact
+            support if you're interested.
+            <br>
+            <br>
+            <br>
+            <a name="export"></a>
+            <span style="font-size: 30px;">Export Your Database</span>
+            <br>
+            <br>
+            You can use any standard MongoDB tool like <strong>mongodump</strong> to export your data, or receive an EBS
+            snapshot of your current
+            databases files. To export your database or a snapshot to your AWS account please view the backup tab in
+            your DBGrow console page. Export a saved snapshot by pressing the share button.
+            <br>
+            <br>
+            <strong>Note:</strong> The snapshot shared with your AWS account does not actually copy the snapshot to your
+            account, merely shares our copy with your account. To obtain a copy in your account you can create an EBS
+            Volume from the shared snapshot, and then take a snapshot of the running volume. This snapshot will be 100%
+            yours and will not be erased by DBGrow, even if you delete your original snapshot, database, or DBGrow
+            account.
+        </div>
+
+
+        <div style="height: 64px;"></div>
+
+        <div id="footer"
+             style="padding: 56px; background-color: #00123c; text-align: center; color: white; font-size: 12px;">
+            <a href="/pricing" style=" padding: 3px;">Pricing</a>
+            <a href="/docs" style=" padding: 3px;">Docs</a>
+            <a href="/faq" style=" padding: 3px;">FAQ</a>
+            <a href="/signin" style=" padding: 3px;">Login</a>
+            <a href="/signup" style=" padding: 3px;">Register</a>
+            <br>
+            <a href="/msa" style=" padding: 3px;" target="_top">Master Services</a>
+            <a href="/tos" style=" padding: 3px;" target="_top">TOS</a>
+            <a href="/privacy_policy" style=" padding: 3px;" target="_top">Privacy Policy</a>
+            <a href="/aup" style=" padding: 3px;" target="_top">Acceptable Use</a>
+
+
+            <br>
+            <a href="https://medium.com/dbgrow" target="_blank" style=" padding: 3px;">Blog</a>
+            <a href="/contact" style=" padding: 3px;">Contact</a>
+            <br>
+            <br>
+            <span>With <span style="color: yellow">❤</span><span
+                    style="color: darkblue">❤</span> From BERKELEY, CA</span>
+            <br>
+            <br>
+            <span style="font-size: 8px">© 2017 DBGrow, Inc.</span>
+            <br>
+            <span style="font-size: 8px">MONGO® and MONGODB® are registered trademarks of MongoDB®, Inc.</span>
+            <br>
+            <span style="font-size: 8px">Icons by <a href="https://icons8.com">Icons8</a></span>
+        </div>
+    </div>
+
+
+</div>
+
+
+</body>
+<style>
+    /*tr{
+        line-height: 30px;
+    }*/
+    tr.spaceUnder > td {
+        padding-bottom: 16px;
+    }
+</style>
+</html>

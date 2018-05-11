@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108991485-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-108991485-1');
+    </script>
+
+    <!-- start Mixpanel -->
+    <script type="text/javascript">(function (e, a) {
+        if (!a.__SV) {
+            var b = window;
+            try {
+                var c, l, i, j = b.location, g = j.hash;
+                c = function (a, b) {
+                    return (l = a.match(RegExp(b + "=([^&]*)"))) ? l[1] : null
+                };
+                g && c(g, "state") && (i = JSON.parse(decodeURIComponent(c(g, "state"))), "mpeditor" === i.action && (b.sessionStorage.setItem("_mpcehash", g), history.replaceState(i.desiredHash || "", e.title, j.pathname + j.search)))
+            } catch (m) {
+            }
+            var k, h;
+            window.mixpanel = a;
+            a._i = [];
+            a.init = function (b, c, f) {
+                function e(b, a) {
+                    var c = a.split(".");
+                    2 == c.length && (b = b[c[0]], a = c[1]);
+                    b[a] = function () {
+                        b.push([a].concat(Array.prototype.slice.call(arguments,
+                            0)))
+                    }
+                }
+
+                var d = a;
+                "undefined" !== typeof f ? d = a[f] = [] : f = "mixpanel";
+                d.people = d.people || [];
+                d.toString = function (b) {
+                    var a = "mixpanel";
+                    "mixpanel" !== f && (a += "." + f);
+                    b || (a += " (stub)");
+                    return a
+                };
+                d.people.toString = function () {
+                    return d.toString(1) + ".people (stub)"
+                };
+                k = "disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+                for (h = 0; h < k.length; h++)e(d, k[h]);
+                a._i.push([b, c, f])
+            };
+            a.__SV = 1.2;
+            b = e.createElement("script");
+            b.type = "text/javascript";
+            b.async = !0;
+            b.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "file:" === e.location.protocol && "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";
+            c = e.getElementsByTagName("script")[0];
+            c.parentNode.insertBefore(b, c)
+        }
+    })(document, window.mixpanel || []);
+    mixpanel.init("c3a62d0ec2f5c8088a8fc5a7acf1745c");</script><!-- end Mixpanel -->
+
+
+    <meta charset="UTF-8">
+    <title>DBGrow Console</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--DEPS-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Saira" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+
+    <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css" rel="stylesheet"/>-->
+    <link href="../common/css/prism.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-java.min.js"></script>
+
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!--Charting-->
+    <!--charting-->
+
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.0/moment.js"></script>
+
+
+    <link rel="stylesheet" href="../mongo_monitoring/mongo_monitoring.css">
+    <!--Scroll hack-->
+
+    <!--clipboard-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether-drop/1.4.2/css/drop-theme-arrows.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether-drop/1.4.2/js/drop.js"></script>
+
+    <script src="../mongo_monitoring/mongo_monitoring.js"></script>
+
+    <link rel=icon href=https://s3-us-west-1.amazonaws.com/dbgrow/images/favicon.ico>
+</head>
+
+<script async type="text/javascript"
+        src="//userlike-cdn-widgets.s3-eu-west-1.amazonaws.com/06d0672d8c60855b8033177b4fdf2a03b5fc007139c29245e50469be2117f060.js"></script>
+<body style="min-height: 100%">
+<div id="top_half">
+    <div id="topology_container" class="w3-display-container">
+        <!--Topology node list centered vertically, whole width-->
+        <div class="w3-display-topmiddle" id="header" style="">
+            <a href="/">
+                <img src="https://s3-us-west-1.amazonaws.com/dbgrow/images/logo.png" style="cursor: pointer;"
+                     alt="MongoDB Hosting"
+                     title="Database"
+                     width="30px" height="30px;"><span
+                    class="logo_text" style="margin-left: 3px; top: 10px; vertical-align: middle; font-size: 26px;">DBGrow</span>
+            </a>
+
+            <span style="margin-top: 2px">
+
+                <a href="/account" style="padding-top: 6px; float: right">
+                <span
+                        class="material-icons"
+                        style="margin-left: 6px; font-size: 22px; float:right; color: white;cursor: pointer;">account_circle</span>
+                    <span style="float: right; font-size: 14px; font-weight: 600;  font-family: 'Roboto', sans-serif; color: white"
+                          id="account_name"></span>
+                </a>
+
+
+                <a href="/faq" target="_blank" style="padding-top: 6px; float: right">
+
+                <span style="float: right; margin-right: 12px; font-size: 14px; font-family: 'Roboto', sans-serif; color: white"
+                >FAQ</span>
+                </a>
+                <!--<a href="/pricing" target="_blank" style="padding-top: 6px; float: right">
+
+                    <span style="float: right; margin-right: 12px; font-size: 14px; font-family: 'Roboto', sans-serif; color: white"
+                    >Pricing</span>
+                </a>-->
+                <a href="/docs" target="_blank" style="padding-top: 6px; float: right">
+
+                <span style="float: right; margin-right: 12px; font-size: 14px; font-family: 'Roboto', sans-serif; color: white"
+                >Docs</span>
+                </a>
+            </span>
+        </div>
+
+        <!--        <div class="w3-card-4"
+                     style="background-color: white; width: 300px; border-radius: 6px; position: absolute; right: 8px; top: 8px;">
+                    <span class="material-icons"
+                          style="padding-right: 8px; padding-top: 8px; font-size: 22px; float:right; color: #4075ef;cursor: pointer;">settings</span>
+                    <span style="padding-top: 8px; padding-left: 8px;">Hello<br>
+                    Hello<br>
+                    Hello<br></span>
+                </div>-->
+
+        <div id="servers_container" class="w3-display-middle"
+             style="z-index: 100; height: 150px; max-width: 100%; overflow-y: hidden; ">
+            <div id="servers" style="max-height: 150px; width: 5000px; "></div>
+        </div>
+
+        <!--<div id="rs_line" class="w3-display-middle" style="z-index: 0; ">
+            <div style="height: 0px; width: 5000px; border: 1px dashed  #4EA93F;"></div>
+        </div>-->
+
+        <div id="upgrade_topology_container" class="w3-display-bottommiddle">
+            <div id="upgrade_button" class="upgrade_button" style="">Upgrade<span class="material-icons"
+                                                                                  style="vertical-align: middle; margin-left: 8px;">cloud_upload</span>
+            </div>
+
+            <div id="upgrade_container" class="upgrade_status"
+                 style="display:none;text-align: center; color: white; font-family: 'Roboto', sans-serif; width: 300px;">
+                <div>
+                    <div style="display: inline-block; font-weight: bold; font-size: 32px; vertical-align: middle; -webkit-animation: spin 0.5s infinite linear;">
+                        .
+                    </div>
+                    <div style="display:inline-block; vertical-align: middle; margin-left: 6px;" id="upgrade_text">
+                        Starting Instances
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="bottom_half" class="w3-display-container">
+    <!--Topology node list centered vertically, whole width-->
+    <div id="tabs" class="w3-card-4">
+        <span data-id="monitoring_tab" class="material-icons tab_icon"
+              style="margin-left:0px;cursor: pointer; font-size: 30px; color: white">timeline</span>
+        <span data-id="connect_tab" class="material-icons tab_icon"
+              style="font-size: 30px; margin-left: 0px; cursor: pointer">power</span>
+        <!--<span data-id="users_tab" class="material-icons tab_icon" style="font-size: 30px;">people</span>-->
+
+        <span data-id="backup_tab" class="material-icons tab_icon"
+              style="font-size: 30px; margin-left: 0px; margin-right: 0px; cursor: pointer">storage</span>
+        <span data-id="settings_tab" class="material-icons tab_icon"
+              style="font-size: 30px; margin-right: 0px;cursor: pointer">settings</span>
+    </div>
+
+    <!--with scrolling-->
+    <div id="tabs_content_container"
+         style="height: calc(100% - 52px);">
+
+        <div id="settings_tab"
+             style="padding-left: 12px; padding-top: 8px; padding-right: 12px; max-height: 100%; min-height: 100%; overflow-y: auto; background-color: #cccccc; font-family: 'Roboto', sans-serif;">
+
+            <div>
+
+                <div id="whitelist" style=" padding-bottom: 16px;">
+                    <span style="font-size: 20px; vertical-align: middle">IP Whitelist</span><span
+                        style="font-size: 12px; color: #8c8c8c; margin-left: 6px; vertical-align: middle;"><a
+                        target="_blank"
+                        href="/docs/#settings_tab">What's this?</a></span>
+
+
+                    <div style="width: calc(100% - 34px); border-radius: 6px; margin-top: 6px; background-color: #b8b8b8; padding: 6px;">
+                        <input id="ip_input" placeholder="CIDR Range"
+                               style="width: 100%; border: none; background-color: transparent;"></input>
+                    </div>
+                    <span
+                            class="material-icons"
+                            style="position: relative; top: -28px; font-size: 24px; float:right; vertical-align: middle; color: #4075ef;cursor: pointer;">add_circle</span>
+
+                    <span id="add_my_ip"
+                          style="position: relative; top: -29px; right: 24px; font-size: 16px; float:right; vertical-align: middle; color: #4075ef;cursor: pointer;">My IP</span>
+
+                    <div id="ip_list" style="">
+                    </div>
+                </div>
+
+                <!--<div style="margin-top: 0px;">
+                    <span style="font-size: 20px;">Storage</span>
+                    <span style="margin-left: 6px; margin-top: 3px; font-size: 20px; float: right">GB</span>
+                    <input id="storage_input" placeholder="3-1000"
+                           style="float: right; vertical-align:middle; text-align: right; border-radius: 6px; width: 60px;  border: none; background-color: #cccccc; padding: 6px;"></input>
+
+                </div>-->
+
+                <div id="piops" style="">
+                    <span style="font-size: 20px;">PIOPS</span>
+
+                    <span
+                            class="material-icons"
+                            style="position: relative; margin-top: 4px; margin-left: 12px; position: absolute; right: 12px; font-size: 24px; float:right; vertical-align: middle; color: #4075ef;cursor: pointer;">check_circle</span>
+                    <input id="piops_input" placeholder="default" type="number" value="100"
+                           style=" vertical-align:middle; position: absolute; right: 46px; border-radius: 6px; width: 75px;  border: none; background-color: #b8b8b8; padding: 6px;"></input>
+                </div>
+
+                <div id="settings_upgrade_notice"
+                     style="display: none; z-index: 1000; position: absolute; top: 63px; left :0; width: 100%; height: calc(100% - 63px)"
+                     class="w3-display-container">
+                    <div class="w3-display-middle" style="width: 100%">
+                        <div class="w3-display-middle" style="opacity: 1; text-align: center;">
+                            <div id="settings_upgrade_link" class="upgrade_button" style="">Upgrade<span
+                                    class="material-icons"
+                                    style="vertical-align: middle; margin-left: 8px;">cloud_upload</span>
+                            </div>
+                            <div style="height: 6px;"></div>
+                            <span>IP whitelisting and Storage options aren't available on Shared plans</span>
+                            <br>
+                            <span><span
+                                    style="color: #4EA93F; font-family: 'Roboto', sans-serif">Upgrade</span> to access these features!</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--
+                        <div style="margin-top: 12px;">
+                            <span style="font-size: 20px;">Maintenance</span> <span style="float: right;">1AM-3AM PST</span>
+                        </div>
+                        -->
+            <div style="height: 16px;"></div>
+        </div>
+
+        <div id="backup_tab" style=" background-color: #cccccc; height: 100%; max-height: 100%; overflow-y: auto">
+            <div id="backup_tab_content" style="">
+                <div style="height: 8px;"></div>
+                <span style="font-family: 'Roboto', sans-serif; font-size: 20px; margin-left: 12px;">Rolling Snapshots</span><span
+                    id="add_snapshot"
+                    class="material-icons"
+                    style="cursor: pointer; float: right; margin-right: 16px; font-size: 24px; margin-top: 3px; color: #4075ef; vertical-align: middle;">add_circle</span>
+                <div id="snapshots" style="margin-top: 6px;"></div>
+                <span style="font-family: 'Roboto', sans-serif; font-size: 20px; margin-left: 12px;">Saved Snapshots</span>
+                <div style="margin-top: 6px;"  id="saved_snapshots"></div>
+
+                <div style="height: 60px;"></div>
+            </div>
+            <div id="backup_tab_shared_notice" class="w3-display-container"
+                 style="display:none;height: calc(100% - 63px); position: absolute; top: 63px; width: 100%; z-index: 1000; text-align: center;">
+
+                <div class="w3-display-middle" style="width: 100%">
+                    <div class="w3-display-middle"
+                         style="opacity: 1; text-align: center; font-family: 'Roboto', sans-serif">
+                        <div id="backup_upgrade_link" class="upgrade_button" style="">Upgrade<span
+                                class="material-icons"
+                                style="vertical-align: middle; margin-left: 8px;">cloud_upload</span>
+                        </div>
+                        <div style="height: 5px;"></div>
+                        <span>Snapshots are not available for Shared databases</span>
+                        <br>
+                        <span style=" font-family: 'Roboto', sans-serif"><span
+                                style="color: #4EA93F; font-size: 15px;">Upgrade</span> to access these features!</span>
+                    </div>
+                </div>
+            </div>
+            <div style="height: 50px;"></div>
+        </div>
+
+        <div id="monitoring_tab" style=" background-color: #cccccc; height: 100%">
+            <!--<span style="font-family: 'Saira', sans-serif">Monitoring</span>-->
+            <!--<span
+                    data-liid="lang_mongo" class="selector_button0">Connections<span
+                    class="material-icons"
+                    style="vertical-align: middle; float: right; margin-left: 6px;">arrow_drop_down</span></span>-->
+
+            <span id="db_stats_list"
+                  style="cursor: pointer;border-bottom: 1px solid #4EA93F; float: left; margin-left: 14px; margin-top: 12px; font-size: 18px; color: black"><span
+                    id="stats_text">Storage Used</span><span
+                    class="material-icons"
+                    style="border-bottom: none; color: #4EA93F; vertical-align: middle;">arrow_drop_down</span></span>
+
+            <span id="db_stats_delta_list"
+                  style="cursor: pointer;border-bottom: 1px solid #4EA93F; float: left; margin-left: 6px; margin-top: 12px; font-size: 18px; color: black"><span
+                    id="delta_text">1 Min</span><span
+                    class="material-icons"
+                    style="border-bottom: none; color: #4EA93F; vertical-align: middle;">arrow_drop_down</span></span>
+
+            <span id="metric_value"
+                  style="display: none; margin-top: 14px; font-size: 20px; font-weight: 500; margin-right: 22px; float: right; margin-left: 6px; color: #3124d6"></span>
+
+            <span class="tooltip" style="float: left; margin-top: 14px; margin-left: 3px;"><span class="tooltiptext">Stats update on the chart every 15 sec for the 1 Minute view window, longer for longer windows.</span> <span
+                    class="material-icons"
+                    style="color: #8c8c8c; vertical-align: middle; font-size: 20px">info</span></span>
+
+            <div class="chart"
+                 style="opacity: 0.3; padding-top: 48px; margin-left: -6px; padding-right:  9px; padding-bottom: 10px; height: 100%"></div>
+
+            <div id="stats_progress" class="loader" style="position: absolute; top: 50%; left: 50%; margin-left: -50px">
+                <svg class="circular" viewBox="25 25 50 50">
+                    <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10"/>
+                </svg>
+            </div>
+        </div>
+
+        <div id="connect_tab"
+             style="background-color: #cccccc; overflow-y: auto; padding: 16px 16px 8px 16px; height: 100%;">
+
+            <h3 style="margin-top: 0px; text-align: center;">Connect to MongoDB</h3>
+
+            <div id="languages" style="padding:6px; margin-top: 12px; text-align: center;  font-size: 30px">
+                <i data-language="mongodb" class="language_button devicon-mongodb-plain"></i>
+                <i data-language="nodejs" class="language_button devicon-nodejs-plain"></i>
+                <i data-language="java" class="language_button devicon-java-plain"></i>
+                <i data-language="python" class="language_button devicon-python-plain"></i>
+                <!--<i class="language_button devicon-ruby-plain"></i>-->
+            </div>
+            <div style="padding-left: 12px; padding-right: 12px;">
+                <input style="display: none" id="connection_code_input"></input>
+
+                <span id="connection_code_copy" data-clipboard-target="#connection_code"
+                      class="material-icons"
+                      style="font-size: 18px; margin-right: 3px; position: relative; top: 23px; display: inline-block;  float: right; color: #cccccc;cursor: pointer;">content_copy</span>
+                <div style=" overflow-x: auto; color: white; margin: 0px 0 12px 0;  background-color: #000511; border-radius: 6px; padding-left: 6px; padding-right: 6px; width: 100%">
+                    <pre id="concodepre" class="code-toolbar" style="margin: 20px 0 0 16px; ">
+<code id="connection_code">
+</code>
+            </pre>
+                </div>
+            </div>
+            <div style="height:100px;"></div>
+        </div>
+
+
+    </div>
+
+
+    <!--templates-->
+    <div style="display: none;">
+        <div id="server_template" class="server" data-index="0">
+            <!--<span class="connect_button material-icons"
+                  style="position: absolute; top: 12px; left: 128px; font-size: 20px; padding: 3px; z-index: 5000; border-radius: 20px; cursor: pointer; color: white; background-color: #c27628;">power</span>-->
+            <span class="memory">
+                    <span style="font-size: 40px;" class="devicon-mongodb-plain-wordmark colored"></span><br>
+                    <span class="server_type" style="font-size: 20px">SHARED</span><br>
+                    <span class="ram" style="font-weight: normal">10GB RAM</span><br>
+                    <span class="region" style="font-size: 14px">us-west-1</span>
+                </span>
+        </div>
+    </div>
+
+    <ul class="db_stats_list_template"
+        style="display: none; padding: 0; list-style: none; font-family: 'Roboto', sans-serif;  background-color: #6d6d6d; color: white; border-radius: 3px; z-index: 500">
+        <li class="dropdown_item" data-metric="connections"
+            style="border-top-left-radius: 3px; border-top-right-radius: 3px; ">Connections
+        </li>
+        <li class="dropdown_item" data-metric="ram_used_bytes">RAM Used</li>
+        <li class="dropdown_item" data-metric="ram_allocated_bytes">RAM Allocated</li>
+        <li class="dropdown_item" data-metric="disk_used_bytes">Storage Used</li>
+        <li class="dropdown_item" data-metric="disk_used_bytes_sec">Storage Used/Sec</li>
+        <li class="dropdown_item" data-metric="connections">Connections</li>
+        <li class="dropdown_item" data-metric="available_connections">Available Conn.</li>
+        <li class="dropdown_item" data-metric="objects">Objects</li>
+        <li class="dropdown_item" data-metric="avg_object_size_bytes">Avg. Object Size</li>
+        <li class="dropdown_item" data-metric="indexes">Indexes</li>
+        <li class="dropdown_item" data-metric="index_size_bytes">Indexes Size</li>
+        <li class="dropdown_item" data-metric="collections">Collections</li>
+        <li class="dropdown_item" data-metric="page_faults">Page Faults</li>
+        <li class="dropdown_item" data-metric="available_read_tickets">Available Reads</li>
+        <li class="dropdown_item" data-metric="available_write_tickets">Available Writes</li>
+        <li class="dropdown_item" data-metric="queued_reads">Queued Reads</li>
+        <li class="dropdown_item" data-metric="queued_writes">Queued Writes</li>
+
+        <li class="dropdown_item" data-metric="insert_sec">Inserts/Sec</li>
+        <li class="dropdown_item" data-metric="query_sec">Queries/Sec</li>
+        <li class="dropdown_item" data-metric="update_sec">Updates/Sec</li>
+        <li class="dropdown_item" data-metric="delete_sec">Deletes/Sec</li>
+        <li class="dropdown_item" data-metric="objects_sec">Objects/Sec</li>
+
+        <li class="dropdown_item"
+            style="border-bottom-left-radius: 3px; border-bottom-right-radius: 3px;" data-metric="replication_lag_ms">
+            Replication Lag
+        </li>
+    </ul>
+
+    <ul class="db_stats_delta_template"
+        style=" display: none; padding: 0; list-style: none; font-family: 'Roboto', sans-serif;  background-color: #6d6d6d; color: white; border-radius: 3px; z-index: 500">
+        <li class="dropdown_item" data-ms="60000"
+            style="border-top-left-radius: 3px; border-top-right-radius: 3px; ">1 Min
+        </li>
+        <li class="dropdown_item" data-ms="360000">6 Min</li>
+        <li class="dropdown_item" data-ms="3600000">1 Hr</li>
+        <li class="dropdown_item" data-ms="21600000">6 Hr</li>
+        <li class="dropdown_item" data-ms="86400000">24 Hr</li>
+        <li class="dropdown_item" data-ms="172800000">48 Hr</li>
+        <li class="dropdown_item" data-ms="604800000">1 Wk</li>
+        <li class="dropdown_item" data-ms="2419200000">1 Mo</li>
+        <li class="dropdown_item" data-ms="7257600000">3 Mo</li>
+        <li class="dropdown_item"
+            style="border-bottom-left-radius: 3px; border-bottom-right-radius: 3px;" data-ms="14515200000">
+            6 Mo
+        </li>
+    </ul>
+
+    <div class="snapshot_template" style="margin-bottom: 12px; padding-right: 16px; padding-left: 16px; display: none;">
+        <div class="w3-card-2" style="background-color: white; border-radius: 6px;">
+            <div class="w3-display-container"
+                 style="height: 54px; margin-left: 16px; margin-right: 10px; font-family: 'Roboto', sans-serif;">
+                <div class="w3-display-left" style="font-weight: 600;">
+                    <span class="snapshot_date">Dec 3, 2016 12:50AM PDT</span> <span class="snapshot_gb"
+                                                                                     style="color: #4EA93F">(3GB)</span>
+                </div>
+                <div class="w3-display-right">
+                    <span class="progress"
+                          style="vertical-align: middle; display: none; color: #63ef52; padding-right: 6px;">0%</span><span
+                        class='buttons'><span
+                        class="snapshot_download material-icons"
+                        style="font-size: 20px; margin-right: 6px; cursor: pointer; vertical-align: middle; color: #999999"
+                        title="Save Snapshot">save</span><span
+                        class="snapshot_restore material-icons"
+                        style="font-size: 20px; margin-right: 6px; cursor: pointer; vertical-align: middle; color: #999999"
+                        title="Restore DB from Snapshot">restore</span></span><span
+                        class="snapshot_delete material-icons" title="Delete Snapshot"
+                        style="cursor: pointer; font-size: 20px; vertical-align: middle; color: #999999;">delete</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="saved_snapshot_template"
+         style="margin-bottom: 12px; padding-right: 16px; padding-left: 16px; display: none;">
+        <div class="w3-card-2" style="background-color: white; border-radius: 6px;">
+            <div class="w3-display-container"
+                 style="height: 54px; margin-left: 16px; margin-right: 10px; font-family: 'Roboto', sans-serif;">
+                <div class="w3-display-left" style="font-weight: 600;">
+                    <span class="snapshot_date">Dec 3, 2016 12:50AM PDT</span> <span class="snapshot_gb"
+                                                                                     style="color: #4EA93F">(3GB)</span>
+                </div>
+                <div class="w3-display-right">
+
+                    <span class="progress"
+                          style="vertical-align: middle; display: none; color: #63ef52; padding-right: 6px;">0%</span><span
+                        class='buttons'><span
+                        class="snapshot_export material-icons"
+                        style="font-size: 20px; margin-right: 6px; cursor: pointer; vertical-align: middle; color: #999999"
+                        title="Export Snapshot">share</span><span
+                        class="snapshot_restore material-icons"
+                        style="font-size: 20px; margin-right: 6px; cursor: pointer; vertical-align: middle; color: #999999"
+                        title="Restore DB from Snapshot">restore</span></span><span
+                        class="snapshot_delete material-icons" title="Delete Snapshot"
+                        style="cursor: pointer; font-size: 20px; vertical-align: middle; color: #999999;">delete</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modals-->
+    <div id="exportmodal" class="w3-modal" style="display: none" onclick="">
+        <div class="w3-modal-content" style="border-radius: 3px; background-color: #FFFFFF">
+            <header style="border-bottom: 2px solid #cccccc; padding: 6px;">
+                <h3 style="text-align: center;">Export Snapshot</h3>
+            </header>
+
+            <div id="exportfields" class="w3-container"
+                 style="max-height: 350px; overflow-y: auto; font-family: 'Roboto', sans-serif;">
+                <div style="height: 16px;"></div>
+                <span>Share this snapshot with an AWS account. If this saved snapshot is deleted it will also delete the snapshot shared with the account.</span>
+                <div style="height: 16px;"></div>
+                <input id="export_aws_id" placeholder="AWS Account ID"
+                       style="padding: 6px; border-radius: 6px; width: 100%; background-color: transparent; border: 1px solid #999999"> </input>
+                <div style="height: 16px;"></div>
+            </div>
+
+            <div style=" height: 56px; padding-top: 12px; padding-right: 12px;  border-top: 2px solid #cccccc;">
+                <button id="export_snapshot_button" class="positivebutton" style="float: right;">
+                    Share
+                </button>
+
+                <button id="export_snapshot_close" class="negativebutton" style="float: right; margin-right: 12px">
+                    Cancel
+                </button>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div id="errormodal" class="w3-modal" style="display: none" onclick="">
+        <div class="w3-modal-content" style="border-radius: 3px; background-color: #FFFFFF">
+            <header style="border-bottom: 2px solid #cccccc; padding: 6px;">
+                <h3 style="text-align: center;">Whoops!</h3>
+            </header>
+
+            <div class="w3-container"
+                 style="max-height: 350px; overflow-y: auto; font-family: 'Roboto', sans-serif;">
+                <div style="height: 16px;"></div>
+                <strong><span>An error occurred:</span></strong>
+                <br>
+                <span id="error_message"></span>
+                <div style="height: 16px;"></div>
+            </div>
+
+            <div style=" height: 56px; padding-top: 12px; padding-right: 12px;  border-top: 2px solid #cccccc;">
+                <button id="error_okay_button" onclick="document.getElementById('errormodal').style.display = 'none'"
+                        class="positivebutton" style="float: right;">
+                    Okay
+                </button>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div id="passwordmodal" class="w3-modal" style="display: none" onclick="">
+        <div class="w3-modal-content" style="border-radius: 3px; background-color: #FFFFFF">
+            <header style="border-bottom: 2px solid #cccccc; padding: 6px;">
+                <h3 style="text-align: center;">Initial MongoDB User</h3>
+            </header>
+
+            <div class="w3-container"
+                 style="max-height: 350px; overflow-y: auto; font-family: 'Roboto', sans-serif; background-color: #dddddd; text-align: center;">
+                <div style="height: 16px;"></div>
+                <span>We've created a first user for your new database!</span>
+                <br>
+                <span>For security purposes <strong>this information will only be shown once.</strong></span>
+                <br>
+                <div style="height: 16px;"></div>
+                <div class="w3-card-4"
+                     style="border-radius: 3px; background-color: white; text-align: left; width: 210px; margin: 0 auto; font-weight: bold;">
+                    <div style=" padding: 12px;">
+                        <span style="color: #6d6d6d; font-size: 12px; margin-right: 3px; vertical-align: middle">name:  </span><strong
+                            style="color: #63ef52; vertical-align: middle;">dbgrowadmin</strong>
+                        <br>
+                        <span style="color: #6d6d6d; font-size: 12px; margin-right: 9px; vertical-align: middle;">pass:  </span><span
+                            id="temp_password"
+                            style="color: #63ef52; font-weight: bold; vertical-align: middle;">jnkj3nf2k3jf23fj</span></span>
+
+                        <input id="temp_password_input" style="display: none">
+                    </div>
+                </div>
+                <br>
+                <div style="height: 10px;"></div>
+            </div>
+
+            <div style=" height: 56px; padding-top: 12px; padding-right: 12px;  border-top: 2px solid #cccccc;">
+
+                <button data-clipboard-target="#temp_password_input"
+                        onclick="document.getElementById('passwordmodal').style.display = 'none';  acknowledgeTempPassword()"
+                        class="positivebutton" style="float: right; margin-left: 12px;">
+                    Close
+                </button>
+
+                <button id="password_copy_button" onclick=""
+                        class="negativebutton" style="float: right; margin-left: 12px;">
+                    Copy To Clipboard
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--Modals-->
+<div id="restoremodal" class="w3-modal" style="display: none" onclick="">
+    <div class="w3-modal-content"
+         style="border-radius: 3px; background-color: #FFFFFF; font-family: 'Roboto', sans-serif">
+        <header style="border-bottom: 2px solid #cccccc; padding: 6px;">
+            <h3 style="text-align: center;">Restore Database</h3>
+        </header>
+
+        <div class="w3-container"
+             style="max-height: 350px; overflow-y: auto; text-align: center; font-family: 'Roboto', sans-serif;">
+            <div style="height: 16px;"></div>
+
+            <span style="color: red; font-size: 26px;">WARNING!</span>
+
+            <div style="height: 6px;"></div>
+
+            <span>This operation will destroy any changes made since your last database snapshot.
+                If you'd like preserve your current dataset make sure to take a fresh snapshot before restoring!
+            </span>
+            <br>
+            <div style="height: 20px;"></div>
+        </div>
+
+        <div style=" height: 56px; padding-top: 12px; padding-right: 12px;  border-top: 2px solid #cccccc;">
+            <button id="restore_button" class="positivebutton" style="float: right; background-color: red">
+                Restore
+            </button>
+
+            <button id="restore_close" class="negativebutton" style="float: right; margin-right: 12px">
+                Cancel
+            </button>
+        </div>
+
+
+    </div>
+
+    <span class="ip_template"
+          style="display:none; border-radius: 20px; margin-right: 6px; padding: 6px 6px 6px 12px; background-color: #4EA93F; color: white"><span
+            class="ip">192.168.1.1/32</span><span class="material-icons ip_delete"
+                                                  style="margin-left: 6px; font-size: 20px; position: relative; top: 4.5px; cursor: pointer;">cancel</span></span>
+</div>
+</body>
+
+
+</html>
