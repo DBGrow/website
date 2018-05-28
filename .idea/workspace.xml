@@ -2,106 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aee974d6-353b-4afe-af78-a79c3f4e2f43" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_console/admin_console.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_console/admin_console.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_console/admin_console.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aup.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/css/prism.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/img/DBGrowLogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/img/DappsIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/img/Map Image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/img/MarketingIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/img/MongoDB.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/img/ObjectDB.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/img/ProofIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/img/ScienceIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/img/backuptab.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/img/cards/amex.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/img/cards/diners.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/img/cards/discover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/img/cards/jcb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/img/cards/mastercard.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/img/cards/visa.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/img/console.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/img/createdb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/img/createdbprogress.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/img/createdbrs.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/img/createdbsummary.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/img/dbgrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/img/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/img/mapImage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/img/marker.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/img/marker_unselect.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/img/monitoringtab.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/img/settingstab.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/js/bower_components/chartist-plugin-pointlabels/.bower.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/js/bower_components/chartist-plugin-pointlabels/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/js/bower_components/chartist-plugin-pointlabels/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/js/bower_components/chartist-plugin-pointlabels/bower.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/js/bower_components/chartist-plugin-pointlabels/dist/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/js/bower_components/chartist-plugin-pointlabels/dist/chartist-plugin-pointlabels.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/js/bower_components/chartist-plugin-pointlabels/dist/chartist-plugin-pointlabels.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/js/bower_components/chartist-plugin-pointlabels/dist/chartist-plugin-pointlabels.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/js/bower_components/chartist-plugin-pointlabels/tasks/aliases.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/js/bower_components/chartist-plugin-pointlabels/tasks/clean.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/js/bower_components/chartist-plugin-pointlabels/tasks/copy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/js/bower_components/chartist-plugin-pointlabels/tasks/jasmine.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/js/bower_components/chartist-plugin-pointlabels/tasks/jshint.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/js/bower_components/chartist-plugin-pointlabels/tasks/uglify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/js/bower_components/chartist-plugin-pointlabels/tasks/umd.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/js/bower_components/chartist/.bower.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/js/bower_components/chartist/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/js/bower_components/chartist/CODINGSTYLE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/js/bower_components/chartist/CONTRIBUTING.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/js/bower_components/chartist/LICENSE-MIT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/js/bower_components/chartist/LICENSE-WTFPL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/js/bower_components/chartist/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/js/bower_components/chartist/bower.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/js/bower_components/chartist/dist/chartist.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/js/bower_components/chartist/dist/chartist.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/js/bower_components/chartist/dist/chartist.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/js/bower_components/chartist/dist/chartist.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/js/bower_components/chartist/dist/chartist.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/js/bower_components/chartist/dist/chartist.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/js/bower_components/chartist/dist/scss/chartist.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/js/bower_components/chartist/dist/scss/settings/_chartist-settings.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/js/prism_init.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/contact.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/contact.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact/contact.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/create_db/create_db.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/create_db/create_db.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/create_db/create_db.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_settings/db_settings.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_settings/db_settings.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_settings/db_settings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docs.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docs.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/docs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/faq/faq.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/faq/faq.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/faq/faq.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/home.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/template-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/template-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/header.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/header.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/logo-dark.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/logo-dark.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongo_monitoring/mongo_monitoring.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongo_monitoring/mongo_monitoring.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongo_monitoring/mongo_monitoring.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/msa.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pricing/pricing.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pricing/pricing.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pricing/pricing.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/privacy_policy.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/signin/signin.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/signup/signup.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/signup/signup.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/signup/signup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tos.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrade_db/upgrade_db.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrade_db/upgrade_db.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/upgrade_db/upgrade_db.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -114,14 +21,67 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="109" column="84" lean-forward="true" selection-start-line="109" selection-start-column="84" selection-end-line="109" selection-end-column="84" />
+            <state relative-caret-position="860">
+              <caret line="83" column="6" lean-forward="true" selection-start-line="83" selection-start-column="6" selection-end-line="83" selection-end-column="6" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#section#1;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="components.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/components.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="icons.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/icons.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="26892">
+              <caret line="747" column="53" selection-start-line="747" selection-start-column="53" selection-end-line="747" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="template-scripts.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/template-scripts.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="responsee.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/responsee.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="576">
+              <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="responsee.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/responsee.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4608">
+              <caret line="128" column="1" selection-start-line="128" selection-start-column="1" selection-end-line="128" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="template-style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/template-style.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="contact.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/contact.html">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -139,10 +99,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="229" />
-    <option name="y" value="-84" />
+    <option name="x" value="130" />
+    <option name="y" value="48" />
     <option name="width" value="1853" />
-    <option name="height" value="2132" />
+    <option name="height" value="2112" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -158,6 +118,16 @@
             <path>
               <item name="dbgrow-website" type="b2602c69:ProjectViewProjectNode" />
               <item name="dbgrow-website" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dbgrow-website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dbgrow-website" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dbgrow-website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dbgrow-website" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -194,34 +164,36 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1527453331350</updated>
-      <workItem from="1527453332486" duration="366000" />
+      <workItem from="1527453332486" duration="1761000" />
+      <workItem from="1527470328369" duration="15000" />
+      <workItem from="1527474788091" duration="327000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="366000" />
+    <option name="totallyTimeSpent" value="2103000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="129" y="13" width="3712" height="2148" extended-state="6" />
+    <frame x="130" y="-8" width="3710" height="2168" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24986523" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,8 +205,135 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="109" column="84" lean-forward="true" selection-start-line="109" selection-start-column="84" selection-end-line="109" selection-end-column="84" />
+        <state relative-caret-position="3924">
+          <caret line="109" column="84" selection-start-line="109" selection-start-column="84" selection-end-line="109" selection-end-column="84" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#section#1;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/components.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/icons.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26892">
+          <caret line="747" column="53" lean-forward="true" selection-start-line="747" selection-start-column="53" selection-end-line="747" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/template-scripts.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/responsee.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4608">
+          <caret line="128" column="1" lean-forward="true" selection-start-line="128" selection-start-column="1" selection-end-line="128" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/template-style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contact.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/responsee.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3924">
+          <caret line="109" column="84" selection-start-line="109" selection-start-column="84" selection-end-line="109" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/components.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/icons.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26892">
+          <caret line="747" column="53" lean-forward="true" selection-start-line="747" selection-start-column="53" selection-end-line="747" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/template-scripts.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/responsee.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4608">
+          <caret line="128" column="1" lean-forward="true" selection-start-line="128" selection-start-column="1" selection-end-line="128" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/template-style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contact.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/responsee.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contact.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/template-style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/responsee.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4608">
+          <caret line="128" column="1" selection-start-line="128" selection-start-column="1" selection-end-line="128" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/components.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/icons.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26892">
+          <caret line="747" column="53" selection-start-line="747" selection-start-column="53" selection-end-line="747" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/template-scripts.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/responsee.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="860">
+          <caret line="83" column="6" lean-forward="true" selection-start-line="83" selection-start-column="6" selection-end-line="83" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#section#1;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
